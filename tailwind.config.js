@@ -2,12 +2,20 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    colors: {
-      text: "#050505",
-      background: "#fafafa",
-      secondaryButton: "#ffffff",
-      accent: "#676864"
+    extend: {
+      colors: {
+        text: "#050505",
+        background: "#fafafa",
+        primary: "#71acf9",
+        secondary: "#ffffff",
+        accent: "#676864",
+      },
+      fontFamily: {
+        "alex-brush": ["Alex Brush", "cursive"],
+        "fira-sans": ["Fira Sans", "sans-serif"],
+      },
     },
   },
+
   plugins: [],
 };
