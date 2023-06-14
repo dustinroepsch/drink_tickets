@@ -17,7 +17,7 @@ function HolePunches(): JSX.Element {
       {Array.from(Array(numHoles).keys())
         .reverse()
         .map((n) => (
-          <Hole n={n + 1} />
+          <Hole key={n} n={n + 1} />
         ))}
     </div>
   );
