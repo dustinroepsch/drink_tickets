@@ -1,7 +1,9 @@
+import cornerImgUrl from "./assets/corner.png";
+
 function Hole(props: { n: number }): JSX.Element {
   return (
     <div className="w-[10mm] h-[10mm] border-2 border-accent rounded-full m-1 border-dashed">
-      <div className="flex flex-row justify-center items-center text-center w-full h-full ">
+      <div className="flex flex-row justify-center items-center text-center w-full h-full text-[gold]">
         <p className=" font-alex-brush text-2xl -rotate-90">{props.n}</p>
       </div>
     </div>
@@ -20,6 +22,7 @@ function HolePunches(): JSX.Element {
     </div>
   );
 }
+
 function DrinkTicket(props: { name: string }): JSX.Element {
   return (
     <div className="w-[3in] h-[1.5in] border-2 border-accent flex justify-end items-center">
@@ -27,8 +30,26 @@ function DrinkTicket(props: { name: string }): JSX.Element {
         <p className=" font-alex-brush text-xl font-bold pt-2 pb-2 text-center border-b-2 w-full border-b-accent bg-slate-400">
           Cheers from Dustin and Valery
         </p>
-        <div className="flex flex-col justify-center items-center h-full">
-          <p className=" font-fira-sans text-center text-4xl">{props.name}</p>
+        <div className="flex flex-col justify-center items-center h-full relative">
+          <img
+            src={cornerImgUrl}
+            className="absolute bottom-0 left-0 aspect-square h-[.4in]"
+          />
+          <img
+            src={cornerImgUrl}
+            className="absolute top-0 left-0 aspect-square h-[.4in] rotate-90"
+          />
+          <img
+            src={cornerImgUrl}
+            className="absolute top-0 right-0 aspect-square h-[.4in] rotate-180"
+          />
+          <img
+            src={cornerImgUrl}
+            className="absolute bottom-0 right-0 aspect-square h-[.4in] -rotate-90"
+          />
+          <p className=" font-im-fell text-center text-4xl z-50">
+            {props.name}
+          </p>
         </div>
       </div>
       <HolePunches />

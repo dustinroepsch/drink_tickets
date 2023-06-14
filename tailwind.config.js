@@ -13,6 +13,7 @@ export default {
       fontFamily: {
         "alex-brush": ["Alex Brush", "cursive"],
         "fira-sans": ["Fira Sans", "sans-serif"],
+        "im-fell": ["IM Fell English SC", "serif"],
       },
     },
   },
